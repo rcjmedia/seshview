@@ -1,0 +1,63 @@
+{{!-- This is where the current window url is returned --}}
+<h2 style="text-align: center"><div id="location"></div></h2>
+
+{{!-- Display DELETE button --}}
+<form action="/rooms/{{rooms.title}}?_method=delete" method="post">
+<input type="submit" value="DELETE ??">
+</form>
+
+{{!-- Display Room Title --}}
+Title: {{rooms.title}}<br>
+
+{{!-- Display YouTube URL --}}
+<p id="urlId">
+{{rooms.body}}
+</p>
+
+{{!-- Display Created By --}}
+Created By: {{rooms.author}}<br>
+
+{{!-- This is where the trimmed Youtube url is returned; set to hidden --}}
+<div id="trimUrl"></div>
+
+{{!-- Display video control buttons --}}
+<div class="search-box" style="text-align: center">
+    <button class="btn">Play</button>
+    <button class="btn">Pause</button>
+    <div class="controls">
+    <input id="slider" type="range" min="0" max="100" value="0" step="1" oninput="changeTime(this)" />  
+    </div>
+</div>
+
+{{!-- The helper function in app.js will change this div 
+to iframe and render the YouTube player --}}
+<div id="player" style="pointer-events: none"></div>
+
+{{!-- Require the Youtube API --}}
+<script src="https://www.youtube.com/iframe_api"></script>
+<br><br><br><br>
+{{!-- Require the helper functions for Youtube --}}
+<script src="/app.js"></script>
+
+{{!-- This will render the url of the current window --}}
+<script>
+document.getElementById("location").innerHTML = 
+"Room URL: " + window.location.href;
+</script>
+
+{{!-- This will trim the value in the p tag element "urlId"
+and return only the Youtube ID so that the helper function
+in app.js can grab the videoID and load the video properly --}}
+<script>
+    let urlBody = document.getElementById("urlId").innerText;
+
+    // slice(32) will trim the "https://www.youtube.com/watch?v=" part of the url
+    newTrim = urlBody.slice(32);
+
+    // this should now return the video ID part of the url
+    document.getElementById("trimUrl").innerHTML = newTrim;
+
+    // as the full youtube url is already displayed, 
+    // set the font color to white to hide from the UI
+    document.getElementById("trimUrl").style.color = "white";
+</script>

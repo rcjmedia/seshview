@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    image: ${IMAGE_NAME}:${IMAGE_VERSION}
+    command: ["node", "server"]
+    container_name: ${CONTAINER_NAME}-prod
+    volumes:
+      - ".:/app/:rw"
+    env_file: .prod.env
+    environment:
+      NODE_ENV: production
+    ports:
+      - "${EXPRESS_HOST_PORT}:${EXPRESS_CONTAINER_PORT}"
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:

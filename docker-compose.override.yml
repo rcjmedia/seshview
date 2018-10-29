@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    image: ${IMAGE_NAME}:${IMAGE_VERSION}-local
+    command: ["npm", "run", "start"]
+    container_name: ${CONTAINER_NAME}
+    volumes:
+      - ".:/app/:rw"
+    env_file: .env
+    environment:
+      NODE_ENV: development
+    ports:
+      - "${EXPRESS_HOST_PORT}:${EXPRESS_CONTAINER_PORT}"
+      - "3000:3000"
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:

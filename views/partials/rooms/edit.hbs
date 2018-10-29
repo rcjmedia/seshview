@@ -1,0 +1,8 @@
+<h2>Edit Room</h2>
+<!-- creates a form a user can use to edit item data -->
+<form action="/rooms/{{rooms.title}}?_method=put" method="post">
+  Title: <input type="text" name="title" value="{{rooms.title}}"><p>
+  Description: <input type="text" name="body" value="{{rooms.body}}"><p>
+  Created By: <input type="text" name="author" value="{{rooms.author}}"><p>
+  <input type="submit" value="SUBMIT">
+</form> 

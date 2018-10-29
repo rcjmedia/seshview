@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+  } 
+
+body {
+  /* width: 100%; */
+  height: 2000px;
+  margin: 400;
+  /* padding: 90px; */
+  text-align: center;
+}
+
+.border {
+  /* position: fixed; */
+  /* top: 0;
+  left: 0;
+  border: 18px solid #000;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  /* margin-top: 0; 
+  margin-right: auto; 
+  margin-bottom: 0; 
+  margin-left: auto; */
+}
+
+h1 {
+  text-align: center;
+}
+
+  .main {
+    display: grid;
+    grid: inherit;
+  }
+  
+  .items {
+    background-color: rgb(62, 114, 107);
+  }
+
+  #location {
+      color: maroon; 
+  }
+
+input[type=submit] {
+  background-color: #fde428;
+  border: none;
+  border-radius: 10px;
+  color: #1e5799;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=text] {
+  background: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 26px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 180px;
+}
+
+.btn {
+    margin: 15px 0;
+    padding: 15px;
+    border: 0px;
+    background: #fde428;
+    color: #1e5799;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 20%;
+    max-width: 20%;
+}
+
+.submit-button {
+    margin: 15px 0;
+    padding: 15px;
+    border: 0px;
+    background: #fde428;
+    color: #1e5799;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 20%;
+    max-width: 20%;
+}
+
+.btn:hover, .submit-button:hover {
+    background: #002e5b; 
+    color: white; 
+    transition: all 0.8s ease 0s;
+}
+
+.search-box {
+    justify-content: center;
+}
+
+.search-form {
+    margin: 15px 0;
+    padding: 15px;
+    border: 0px;
+    background: #fde428;
+    color: #1e5799;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 20%;
+    max-width: 20%;
+}
+
+ul {
+  list-style-type: none;
+}

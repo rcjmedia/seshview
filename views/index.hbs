@@ -1,0 +1,28 @@
+<br>
+{{> nav}}
+{{!-- <form action="/rooms/new" method="get">
+<input type="submit" value="Create a Room"> --}}
+ <br><br><br><br>
+
+
+{{#if rooms}}
+
+  {{#if rooms.list}}
+
+    {{> rooms/listRooms}}
+
+  {{else if rooms.new}}
+
+    {{> rooms/new}}
+
+  {{else if rooms.room}}
+
+    {{> rooms/room}}
+
+    {{#if rooms.edit}}
+      {{> rooms/edit}}
+    {{/if}}
+
+  {{/if}}
+
+{{/if}}
