@@ -1,5 +1,5 @@
-let socket  =  io.connect('https://pure-anchorage-64247.herokuapp.com');
-// let socket  =  io.connect('http://localhost:8080');
+// let socket  =  io.connect('https://pure-anchorage-64247.herokuapp.com');
+let socket  =  io.connect('http://localhost:8080');
 
 // Extracted buttons
 let buttons = document.getElementsByTagName('button');

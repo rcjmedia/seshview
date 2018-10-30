@@ -2,4 +2,4 @@ version: '3'
 services:
   web:
     build: .
-    image: rcjmedia/seshview_app:local
+    image: rcjmedia/seshview:local

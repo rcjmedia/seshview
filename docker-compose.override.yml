@@ -1,9 +1,9 @@
 version: '3'
 services:
   web:
-    image: ${IMAGE_NAME}:${IMAGE_VERSION}-local
+    image: rcjmedia/seshview:${IMAGE_VERSION}-local
     command: ["npm", "run", "start"]
-    container_name: ${CONTAINER_NAME}
+    container_name: seshview
     volumes:
       - ".:/app/:rw"
     env_file: .env
